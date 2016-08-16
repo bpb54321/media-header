@@ -1,0 +1,82 @@
+.hero-image {
+  width: 100%;
+  height: 75vh;
+  background-size: cover;
+  background-position: center;
+
+  background-color: gray; //In case javascript disabled for responsive header images
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#video-container {
+  @media (max-width: 640px) {
+    video {
+      width: 200%;
+      position: relative;
+      left: -50%;
+    }
+  }
+}
+svg#video-play-overlay-button {
+  polygon {
+    fill: gray;
+    stroke: gray;
+  }
+  rect {
+    opacity: .6;
+  }
+}
+#video-container-android {
+  position: absolute;
+  top: 0;
+  video {
+    width: 100%;
+    height: 75vh;
+    background-color: black;
+  }
+}
+.youtube-header-container {
+  padding-top: 56%; //To ensure correct video aspect ratio
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+  }
+}
+%hero-image-slideshow-dimensions {
+  width: 100%;
+  height: 33vh !important;
+  @media (min-width: 400px) and (max-width: 800px) {
+    height: 50vh !important;
+  }
+  @media (min-width: 800px) {
+    height: 75vh !important;
+  }
+}
+.hero-image-slideshow {
+  @extend %hero-image-slideshow-dimensions;
+  margin-bottom: 1rem !important;
+  .slick-dots {
+    margin-left: 0;
+  }
+  .slick-slide {
+    opacity: 1; //Don't want the inactive slides to be dimmed on header slideshow
+  }
+}
+.image-slideshow-replacement {
+  background-color: gray; //When there are no images
+}
+.hero-image-slide {
+  @extend %hero-image-slideshow-dimensions;
+  background-position: center center;
+  background-size: cover;
+}

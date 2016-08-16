@@ -1,0 +1,68 @@
+.hero-image {
+  width: 100%;
+  height: 75vh;
+  background-size: cover;
+  background-position: center;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+@media (max-width: 640px) {
+  #video-container video {
+    width: 200%;
+    position: relative;
+    left: -50%; } }
+
+svg#video-play-overlay-button polygon {
+  fill: gray;
+  stroke: gray; }
+svg#video-play-overlay-button rect {
+  opacity: .6; }
+
+#video-container-android {
+  position: absolute;
+  top: 0; }
+  #video-container-android video {
+    width: 100%;
+    height: 75vh;
+    background-color: black; }
+
+.youtube-header-container {
+  padding-top: 56%;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box; }
+  .youtube-header-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%; }
+
+.hero-image-slideshow, .hero-image-slide {
+  width: 100%;
+  height: 33vh !important; }
+  @media (min-width: 400px) and (max-width: 800px) {
+    .hero-image-slideshow, .hero-image-slide {
+      height: 50vh !important; } }
+  @media (min-width: 800px) {
+    .hero-image-slideshow, .hero-image-slide {
+      height: 75vh !important; } }
+
+.hero-image-slideshow {
+  margin-bottom: 1rem !important; }
+  .hero-image-slideshow .slick-dots {
+    margin-left: 0; }
+  .hero-image-slideshow .slick-slide {
+    opacity: 1; }
+
+.image-slideshow-replacement {
+  background-color: gray; }
+
+.hero-image-slide {
+  background-position: center center;
+  background-size: cover; }
+
+/*# sourceMappingURL=style.css.map */
