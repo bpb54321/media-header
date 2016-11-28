@@ -10,22 +10,8 @@
 	License URI: https://www.gnu.org/licenses/gpl-2.0.html
 	*/
 
-	//Run when the plugin is activated or deactivated or uninstalled
-	register_activation_hook( __FILE__, 'mh_activate' );
-	function mh_activate() {
 
-	}
-	register_deactivation_hook( __FILE__, 'mh_dactivate' );
-	function mh_deactivate() {
-
-	}
-
-	register_uninstall_hook( __FILE__, 'mh_uninstall' );
-	function mh_uninstall() {
-
-	}
-
-	//--------------------------------------Enqueue Javascript and Styles----------------------------------//
+	//-----------------------------Enqueue Javascript and Styles----------------------------------//
 	add_action( 'wp_enqueue_scripts', 'mh_enqueue_scripts_and_styles');
 	function mh_enqueue_scripts_and_styles() {
         wp_enqueue_script( 'mh-scripts-js', plugins_url( 'js/mh-scripts.js', __FILE__ ), ['jquery', 'slick-js'], null, true );
@@ -33,7 +19,7 @@
 	}
 
 
-	//-----------------------Register metaboxes relevant to this plugin using CMB2---------------//
+	// <editor-fold> -----------Register metaboxes relevant to this plugin using CMB2---------------//
 	/**
 	 * Include and setup custom metaboxes and fields. (make sure you copy this file to outside the CMB2 directory)
 	 *
@@ -130,6 +116,7 @@
 		) );
 	}
 
+// </editor-fold>
     //-----------------------Display the media header by hooking into the 'mh_display_media_header' hook that theme must provide-----------//
 	include_once( 'includes/media-header-view.php' );
 
